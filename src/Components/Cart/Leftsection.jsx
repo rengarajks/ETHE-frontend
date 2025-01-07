@@ -3,7 +3,7 @@ import Cartcard from './Cartcard'
 
 const Leftsection = () => {
   return (
-    <div className='md:col-span-8 col-span-full w-full text-sm md:py-4 py-8 space-y-4'>
+    <div className='md:col-span-8 col-span-full w-full text-sm py-4  space-y-4'>
             <div className='bg-white px-5 py-3 rounded-sm border shadow-sm flex justify-between items-center'>
                 <div>
                     <div>

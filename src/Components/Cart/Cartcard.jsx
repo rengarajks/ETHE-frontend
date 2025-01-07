@@ -14,8 +14,8 @@ const Cartcard = () => {
                 </div>
 
                 {/* MOBILE */}
-                <div className='flex flex-col md:hidden'>
-                <div className='w-36 h-36 '>
+                <div className='flex flex-col md:hidden pr-4'>
+                <div className='w-40 h-40 '>
                   <img className='w-full h-full object-contain' src='https://p3-ofp.static.pub/ShareResource/na/subseries/hero/lenovo-ideapad-slim-3i-15inch-gen8-abyss-blue.png'/>      
                 </div>
 

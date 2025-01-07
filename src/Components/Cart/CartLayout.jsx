@@ -5,7 +5,7 @@ import Rightsection from './Rightsection'
 
 const CartLayout = () => {
   return (
-    <div className='grid grid-cols-12 h-full w-full pt-11 px-8 py-4'>
+    <div className='grid grid-cols-12 h-full w-full pt-11 md:px-8 py-4'>
         <Leftsection/>
         <Rightsection/>
     </div>
