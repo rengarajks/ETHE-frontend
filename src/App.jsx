@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router';
 
 export default function App() {
   return (
-    <div className='bg-gray-300'>
+    <div className=''>
       <Router>
         <Routes>
           <Route path='/*' element={<Home/>}/>

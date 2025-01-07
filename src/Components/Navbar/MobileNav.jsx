@@ -15,6 +15,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import { FaUser } from 'react-icons/fa';
 import { TbCategoryFilled } from 'react-icons/tb';
 import { MobileEtheData, MobileServiceData, MobileUserData } from './data/MobileData';
+import { Link, useNavigate } from 'react-router';
 
 const MobileNav = () => {
   const [open, setOpen] = React.useState(false);
@@ -22,6 +23,11 @@ const MobileNav = () => {
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
   };
+
+  const navigate=useNavigate();
+  const handleNavigate=(route)=>{
+    navigate(route);
+  }
 
   const DrawerList = (
     <Box sx={{ width: 250,height:'100%'}} role="presentation" onClick={toggleDrawer(false)}>
@@ -46,7 +52,7 @@ const MobileNav = () => {
         <div className='text-black border-b space-y-2 py-2'>
           {
             MobileUserData.map((data)=>
-            <span className='flex items-center text-[0.9rem] font-medium px-2 py-1 gap-2'>
+            <span onClick={()=>handleNavigate(data.url)} className='flex items-center text-[0.9rem] font-medium px-2 py-1 gap-2'>
                {data.icon}
                <h1 className=''>{data.title}</h1>
             </span>
@@ -88,8 +94,10 @@ const MobileNav = () => {
             </Drawer>
             </div>
         </div>
-        <div onClick={toggleDrawer}>
+        <div>
+           <Link to='/cart'>
            <IoCart size='1.6rem'/>
+           </Link>
         </div>
     </div>
   )

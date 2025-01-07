@@ -8,13 +8,16 @@ import { SiStockx } from "react-icons/si";
 export const moreData=[
     {
         icon:<MdSell/>,
-        title:"Sell on Ethe"
+        title:"Sell on Ethe",
+        url:'/account'
     },
     {
         icon:<IoCall/>,
-        title:"24x7 Customer Care"
+        title:"24x7 Customer Care",
+        url:'/account'
     },{
         icon:<FaChildReaching/>,
-        title:"Advertise"
+        title:"Advertise",
+        url:'/account'
     }
 ];

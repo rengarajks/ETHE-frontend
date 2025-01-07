@@ -2,7 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
-const imageData = ['tes.jpg', 'sas.jpg', 'sas2.jpg'];
+const imageData = ['https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/1e5f2e97e448cee0.jpg?q=20',
+   'https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/7107ebd503f6bccf.jpg?q=20',
+   'https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/d9290fb51138d286.png?q=20',
+   'https://rukminim2.flixcart.com/fk-p-flap/1620/270/image/7107ebd503f6bccf.jpg?q=20'
+];
 
 const Banner = () => {
   const [active, setActive] = useState(0);
@@ -56,7 +60,7 @@ const Banner = () => {
         <img
           src={imageData[active]}
           alt={`Image ${active}`}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </motion.div>
 

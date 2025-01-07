@@ -6,19 +6,23 @@ import { GrOrderedList } from "react-icons/gr";
 export const etheData=[
     {
         icon:<FaCircleUser/>,
-        title:"My Profile"
+        title:"My Profile",
+        url:'/account'
     },
     {
         icon:<BsWalletFill/>,
-        title:"Orders"
+        title:"Orders",
+        url:'/account/orders'
     },
     {
         icon:<BsHeartFill/>,
-        title:"Wishlist"
+        title:"Wishlist",
+        url:'/account'
     },
     {
         icon:<BsBellFill/>,
-        title:"Notifications"
+        title:"Notifications",
+        url:'/account'
     }
 
 ];

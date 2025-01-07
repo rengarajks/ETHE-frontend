@@ -4,25 +4,18 @@ import { FaCircleUser } from 'react-icons/fa6'
 import { IoCart } from 'react-icons/io5'
 import { etheData } from './data/etheData'
 import { moreData } from './data/moreData'
+import { Link, useNavigate } from 'react-router'
 
 const CartAndMore = () => {
     const[isEtheEnable,setIsEtheEnable]=useState(false);
     const[isMoreEnable,setIsMoreEnable]=useState(false);
-    const modalRef = useRef(null); // Ref to track the modal
+    const modalRef = useRef(null); 
+    const navigate=useNavigate();
 
-//   useEffect(() => {
-//     const handleClickOutside = (event) => {
-//       if (modalRef.current && !modalRef.current.contains(event.target)) {
-//         setIsEtheEnable(false); // Close the modal
-//       }
-//     };
+    const handleNavigate=(route)=>{
+        navigate(route)
+    }
 
-//     document.addEventListener("mouseleave", handleClickOutside);
-//     return () => {
-//       document.removeEventListener("mouseleave", handleClickOutside);
-//     };
-//   }, []);
-  
   return (
     <div className='flex items-center gap-8 text-sm font-medium'>
         <div>
@@ -37,7 +30,7 @@ const CartAndMore = () => {
             <div onMouseLeave={()=>setIsEtheEnable(false)} ref={modalRef} className='w-[30vh] rounded-sm text-[#312ba6] -translate-x-12 shadow-md font-medium text-xs absolute bg-white'>
             {
                 etheData.map((data)=>
-                <div className='flex items-center hover:bg-gray-100 px-3 py-3 gap-2 border-b cursor-pointer'>
+                <div onClick={()=>handleNavigate(data.url)} className='flex items-center hover:bg-gray-100 px-3 py-3 gap-2 border-b cursor-pointer'>
                     {data.icon}
                     <p>{data.title}</p>
                 </div>
@@ -71,10 +64,12 @@ const CartAndMore = () => {
             
         </div>
 
+        <Link to='/cart'>
         <div className='flex items-center gap-1'>
             <IoCart size='1.2rem'/>
             <p>Cart</p>
         </div>
+        </Link>
     </div>
   )
 }

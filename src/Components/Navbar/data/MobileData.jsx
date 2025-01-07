@@ -19,19 +19,23 @@ export const MobileEtheData=[
 export const MobileUserData=[
     {
         title:'My Account',
-        icon:<FaCircleUser/>
+        icon:<FaCircleUser/>,
+        url:'/account'
     },
     {
         title:'My Orders',
-        icon:<BsWalletFill/>
+        icon:<BsWalletFill/>,
+        url:'/account/orders'
     },
     {
         title:'My Wishlist',
-        icon:<BsHeartFill/>
+        icon:<BsHeartFill/>,
+        url:'/account'
     },
     {
         title:'My Notifications',
-        icon:<BsBellFill/>
+        icon:<BsBellFill/>,
+        url:'/account'
     }
 ];
 export const MobileServiceData=[

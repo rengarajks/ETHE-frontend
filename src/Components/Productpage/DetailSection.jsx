@@ -12,7 +12,7 @@ const DetailSection = () => {
         setSeeMore(!seeMore);
     }
   return (
-    <div className='col-span-7 md:px-8 space-y-2 pt-10'>
+    <div className='col-span-7 md:px-8 space-y-2'>
             
             <div className='hidden md:block md:visible text-xs font-medium cursor-pointer text-gray-500'>
                 Home / Mobile / Iphone / Iphone 7 plus
