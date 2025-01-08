@@ -1,7 +1,6 @@
 import { Rating } from '@mui/material'
 import React from 'react'
 import { AiOutlineThunderbolt } from 'react-icons/ai'
-import { FaRegTrashAlt } from 'react-icons/fa'
 import { HiOutlineTrash } from 'react-icons/hi'
 
 const Cartcard = () => {

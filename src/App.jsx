@@ -4,7 +4,7 @@ import { BrowserRouter as Router,Routes,Route } from 'react-router';
 
 export default function App() {
   return (
-    <div className=''>
+    <div className='font-poppinsMedium'>
       <Router>
         <Routes>
           <Route path='/*' element={<Home/>}/>

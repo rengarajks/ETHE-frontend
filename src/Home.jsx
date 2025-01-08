@@ -25,7 +25,7 @@ const Home = () => {
         <Route path="/search/:term" element={<Search />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/account" element={<Account />} />
-        <Route path="/account/orders" element={<Orders />} />
+        <Route path="/account/orders/:term" element={<Orders />} />
       </Routes>
 
       {authEnable && <Auth setAuthEnable={setAuthEnable} />}

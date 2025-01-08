@@ -1,18 +1,24 @@
 import { div } from 'framer-motion/client'
 import React from 'react'
+import { FaArrowLeft } from 'react-icons/fa'
 
-const PersonalInformation = () => {
+const PersonalInformation = ({menuVisible,setMenuVisible}) => {
   return (
-    <div className='space-y-10'>
-            <div className='space-y-6'>
+    <div>
+    
+    <div className='space-y-10 px-6 md:pt-0 pt-11'>
+    <div className='space-y-6'>
         <div>
-            <div className='flex items-center font-medium gap-2'>
-            <h1>Personal Information</h1>
+            <div className='flex items-center font-medium gap-4'>
+            <span className='flex items-center gap-1'>
+                <FaArrowLeft className='md:hidden' onClick={()=>setMenuVisible(true)}/>
+                <h1>Personal Information</h1>
+            </span>
             <button className='text-blue-500'>Edit</button>
             </div>
         </div>
 
-        <div className='flex items-center gap-4 '>
+        <div className='md:flex md:space-y-0 space-y-4 items-center gap-4'>
              <input className='border rounded-sm px-2 py-2 text-sm' disabled value={'Ethe'}/>
              <input className='border rounded-sm px-2 py-2 text-sm' disabled value={'Customer'}/>
         </div>
@@ -55,6 +61,8 @@ const PersonalInformation = () => {
              <input className='border rounded-sm px-2 py-2 text-sm' disabled value={'sam@123.com'}/>
         </div>
     </div>
+    </div>
+
     </div>
   )
 }

@@ -1,9 +1,18 @@
 import React from 'react'
 import Cartcard from './Cartcard'
+import { FaArrowLeft } from 'react-icons/fa'
+import { useNavigate } from 'react-router'
 
 const Leftsection = () => {
+    const navigate=useNavigate();
   return (
     <div className='md:col-span-8 col-span-full w-full text-sm py-4  space-y-4'>
+            
+            <div className='bg-white'>
+            <div onClick={()=>navigate('/')} className='md:hidden bg-white px-4 py-4 font-semibold text-[1.2rem] rounded-sm shadow-sm flex items-center gap-2'>
+                <FaArrowLeft/>
+                <h1 className='pt-[0.1rem]'>Cart</h1>
+            </div>
             <div className='bg-white px-5 py-3 rounded-sm border shadow-sm flex justify-between items-center'>
                 <div>
                     <div>
@@ -16,6 +25,7 @@ const Leftsection = () => {
                 <div>
                     <button className='border px-3 py-1 rounded-md font-medium text-blue-500'>Change</button>
                 </div>
+            </div>
             </div>
 
             <div className='bg-white rounded-sm shadow-sm border'>
