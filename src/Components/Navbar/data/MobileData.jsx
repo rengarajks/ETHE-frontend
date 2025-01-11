@@ -8,11 +8,13 @@ import { TbCategoryFilled } from "react-icons/tb";
 export const MobileEtheData=[
     {
         title:'All Categories',
-        icon:<TbCategoryFilled/>
+        icon:<TbCategoryFilled/>,
+        url:'/category'
     },
     {
         title:'Top Sale',
-        icon:<FaArrowTrendUp/>
+        icon:<FaArrowTrendUp/>,
+        url:'/'
     }
 
 ];
@@ -41,14 +43,17 @@ export const MobileUserData=[
 export const MobileServiceData=[
     {
         title:'Sell on Ethe',
-        icon:<MdSell/>
+        icon:<MdSell/>,
+        url:'/seller'
     },
     {
         title:'24x7 Customer Care',
-        icon:<IoCall/>
+        icon:<IoCall/>,
+        url:'/seller'
     },
     {
         title:'Advertise',
-        icon:<FaAd/>
+        icon:<FaAd/>,
+        url:'/seller'
     }
 ];

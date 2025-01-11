@@ -16,7 +16,7 @@ const Navbar = ({setAuthEnable,authEnable}) => {
         </div>
         {/* MOBILE */}
         <div className='md:hidden w-full'>
-           <MobileNav/>
+           <MobileNav setAuthEnable={setAuthEnable} authEnable={authEnable}/>
         </div>
     </div>
   )

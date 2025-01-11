@@ -32,7 +32,7 @@ const CartAndMore = () => {
                 etheData.map((data)=>
                 <div onClick={()=>handleNavigate(data.url)} className='flex items-center hover:bg-gray-100 px-3 py-3 gap-2 border-b cursor-pointer'>
                     {data.icon}
-                    <p>{data.title}</p>
+                    <p className='text-black'>{data.title}</p>
                 </div>
                 )
             }
@@ -53,9 +53,9 @@ const CartAndMore = () => {
             <div onMouseLeave={()=>setIsMoreEnable(false)} ref={modalRef} className='w-[30vh] rounded-sm text-[#312ba6] -translate-x-12 shadow-md font-medium text-xs absolute bg-white'>
             {
                 moreData.map((data)=>
-                <div className='flex items-center hover:bg-gray-100 px-3 py-3 gap-2 border-b cursor-pointer'>
+                <div onClick={()=>handleNavigate(data.url)} className='flex items-center hover:bg-gray-100 px-3 py-3 gap-2 border-b cursor-pointer'>
                     {data.icon}
-                    <p>{data.title}</p>
+                    <p className='text-black'>{data.title}</p>
                 </div>
                 )
             }

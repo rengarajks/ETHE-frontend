@@ -17,7 +17,7 @@ import { TbCategoryFilled } from 'react-icons/tb';
 import { MobileEtheData, MobileServiceData, MobileUserData } from './data/MobileData';
 import { Link, useNavigate } from 'react-router';
 
-const MobileNav = () => {
+const MobileNav = ({setAuthEnable,authEnable}) => {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen) => () => {
@@ -34,14 +34,14 @@ const MobileNav = () => {
       <div className=' text-white h-full w-full'>
         <div className='flex justify-between items-center px-3 py-4 bg-[#312ba6]'>
           <FaUser/>
-          <h1>Login & Signup</h1>
+          <h1 onClick={()=>setAuthEnable(true)}>Login & Signup</h1>
           <h1>ETHE</h1>
         </div>
 
         <div className='text-black border-b space-y-2 py-2'>
           {
             MobileEtheData.map((data)=>
-            <span className='flex items-center text-[0.9rem] font-medium px-2 py-1 gap-2'>
+            <span onClick={()=>handleNavigate(data.url)} className='flex items-center text-[0.9rem] font-medium px-2 py-1 gap-2'>
                {data.icon}
                <h1 className=''>{data.title}</h1>
             </span>
@@ -63,7 +63,7 @@ const MobileNav = () => {
         <div className='text-black border-b space-y-2 py-2'>
           {
             MobileServiceData.map((data)=>
-            <span className='flex items-center text-[0.9rem] font-medium px-2 py-1 gap-2'>
+            <span onClick={()=>handleNavigate(data.url)} className='flex items-center text-[0.9rem] font-medium px-2 py-1 gap-2'>
                {data.icon}
                <h1 className=''>{data.title}</h1>
             </span>

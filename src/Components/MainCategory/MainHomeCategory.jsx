@@ -46,6 +46,7 @@ export const MainHomeCategory = () => {
             {/* Popup - Only display if subCategory length is greater than 0 */}
             {hoveredCategory === data.title && data.subCategory.length > 0 && (
               <ModalMainCategory
+                cat={data.title}
                 subCategory={data.subCategory}
                 handleMouseLeave={handleMouseLeave}
                 handleMouseEnter={handleMouseEnter}

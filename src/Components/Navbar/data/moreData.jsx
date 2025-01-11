@@ -4,12 +4,18 @@ import { IoCall } from "react-icons/io5";
 import { MdSell } from "react-icons/md";
 import { RiSearchLine } from "react-icons/ri";
 import { SiStockx } from "react-icons/si";
+import { TbCategoryFilled } from "react-icons/tb";
 
 export const moreData=[
     {
+        icon:<TbCategoryFilled/>,
+        title:"All Categories",
+        url:'/category'
+    },
+    {
         icon:<MdSell/>,
         title:"Sell on Ethe",
-        url:'/account'
+        url:'/seller'
     },
     {
         icon:<IoCall/>,

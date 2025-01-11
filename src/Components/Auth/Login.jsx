@@ -3,7 +3,8 @@ import React from 'react'
 const Login = ({setIsRegister}) => {
   return (
     <div className='grid grid-cols-12 w-full h-full bg-white'>
-            <div className='col-span-5 flex flex-col items-center justify-between bg-[#312ba6] px-6 py-12 text-white'>
+            <div className='md:col-span-5 hidden md:block md:visible'>
+                <div className='flex flex-col h-full items-center justify-between bg-[#312ba6] px-6 py-12 text-white'>
                 <div>
                     <h1 className='font-semibold text-2xl'>Login</h1>
                     <p className='text-lg'>Get access to your Orders, Wishlist and Recommendations</p>
@@ -12,8 +13,9 @@ const Login = ({setIsRegister}) => {
                 <div className='flex justify-center w-40 h-40 pr-4'>
                     <img src='giphy.webp'/>
                 </div>
+                </div>
             </div>
-            <div className='col-span-7 px-8 py-12 flex flex-col justify-between'>
+            <div className='md:col-span-7 col-span-12 px-8 py-12 flex flex-col justify-between'>
                 <div className='space-y-4'>
                     <div className='space-y-8'>
                         <div className='space-y-4'>

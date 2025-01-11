@@ -15,6 +15,7 @@
     "@mui/icons-material": "^6.3.1",
     "@mui/lab": "^6.0.0-beta.22",
     "@mui/material": "^6.3.1",
+    "axios": "^1.7.9",
     "ethe-frontend": "file:",
     "framer-motion": "^11.15.0",
     "lodash": "^4.17.21",

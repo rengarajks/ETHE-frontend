@@ -26,7 +26,9 @@ const ImageSection = () => {
               <img className='w-full h-full object-contain' src={imageData[imageIndex]}/>
             </div>
             <div className='flex gap-2 w-full py-2 font-bold text-white'>
-                <button className='bg-[#FF9F00] rounded-sm shadow-sm w-[50%] py-3'>ADD TO CART</button>
+                {/* <button className='bg-[#FF9F00] rounded-sm shadow-sm w-[50%] py-3'>ADD TO CART</button> */}
+                <button className='bg-[#FF9F00] rounded-sm shadow-sm w-[50%] py-3'>ADDED IN CART</button>
+
                 <button className='bg-[#FB641B] rounded-sm shadow-sm w-[50%] py-3'>BUY NOW</button>
             </div>
             </div>
