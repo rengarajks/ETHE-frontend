@@ -6,6 +6,7 @@ const ModalMainCategory = ({handleMouseEnter,handleMouseLeave,subCategory,cat}) 
   const handleNavigate=(sub)=>{
     navigate(`${cat}/${sub}`)
   }
+  console.log('SUB AND CAT=',subCategory,cat)
   return (
     <div
     className="absolute top-full -translate-x-12 left-0 mt-2 bg-white border rounded shadow-md z-40 w-[40vh]"

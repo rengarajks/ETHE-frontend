@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './Components/Navbar/Navbar';
 import Homepage from './Pages/Homepage';
 import { Route, Routes } from 'react-router';
@@ -13,11 +13,20 @@ import Category from './Pages/Category';
 import SubCategory from './Pages/SubCategory';
 import Sell from './Pages/Sell';
 import Checkout from './Pages/Checkout';
+import { useDispatch, useSelector } from 'react-redux';
+import { getProfileAction } from './Redux/Auth/auth.action';
 
 const Home = () => {
+  const dispatch=useDispatch();
+  const {auth}=useSelector(store=>store)
   const [authEnable, setAuthEnable] = useState(true);
+  const jwt=localStorage.getItem('jwt');
+  console.log('jwt=',jwt);
+  useEffect(()=>{
+    dispatch(getProfileAction());
+  },[jwt])
+  console.log('AUTH=',auth);
 
-  console.log("authEnable state:", authEnable); // Debugging
 
   return (
     <div className=''>

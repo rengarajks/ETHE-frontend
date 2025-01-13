@@ -1,8 +1,12 @@
+import { Store } from '@mui/icons-material'
 import { div } from 'framer-motion/client'
 import React from 'react'
 import { FaArrowLeft } from 'react-icons/fa'
+import { useSelector } from 'react-redux'
 
 const PersonalInformation = ({menuVisible,setMenuVisible}) => {
+    const {auth}=useSelector(Store=>Store);
+    console.log('AUTH=',auth)
   return (
     <div>
     
@@ -58,7 +62,7 @@ const PersonalInformation = ({menuVisible,setMenuVisible}) => {
         </div>
 
         <div className='py-4 flex items-center gap-4'>
-             <input className='border rounded-sm px-2 py-2 text-sm' disabled value={'sam@123.com'}/>
+             <input className='border rounded-sm px-2 py-2 text-sm' disabled value={auth?.user?.phone}/>
         </div>
     </div>
     </div>
